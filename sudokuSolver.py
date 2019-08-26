@@ -8,12 +8,13 @@ def main():
     for row in board:
         print(row)
 
-    solve(board)
+    if solve(board) == True:
+        print("____Finished Board____")
 
-    print("____Finished Board____")
-
-    for row in board:
-        print(row)
+        for row in board:
+            print(row)
+    else:
+        print("____No possible solution____")
 
 #Backtracking alg
 def solve(board: list) -> bool:
